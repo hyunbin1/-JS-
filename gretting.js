@@ -27,7 +27,7 @@ function paintGreeting(text){
 
 // 사람 이름을 입력하고 엔터를 칠 시에 페이지는 새로고침이 되며 입력한 것은 사라진다. 우리가 원하는 것은 이것을 막는것이다. 
 // enter을 쳐도 아무일도 일어나지 않음
-// 1단계 작업임
+// 1단계 작업임: 기본 이벤트 발생을 막음 = 엔터를 치면 새로고침이 되는것
 function handleSubmit(event){
     event.preventDefault();
     //2번째 작업: 이름 value를 받은 후 paintGreeting function을 작동하게 만들기

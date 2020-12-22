@@ -8,7 +8,18 @@ const TODOS_LS = "toDos";
 
 
 //# 입력된 모든 todo 저장해주기
-const toDos = [];
+let toDos = [];
+
+function deleteToDo(event) {
+  const btn = event.target;
+  const li = btn.parentNode;
+  toDoList.removeChild(li);
+  const cleanToDos = toDos.filter(function(toDo) {
+    return toDo.id !== parseInt(li.id);
+  });
+  toDos = cleanToDos;
+  saveToDos();
+}
 
 //# 저장함수
 function saveToDos(){
@@ -32,7 +43,7 @@ function paintToDo(text) {
     li.appendChild(delBtn);
     toDoList.appendChild(li);
     //# 입력했을때의 리스트에 넣기
-    li.id - newId;
+    li.id = newId;
     const toDoObj = {
         text: text,
         id: newId
@@ -55,14 +66,14 @@ function handleSubmit(event) {
 }
 
 //# 로컬 저장소에서 로드해오기
-function loadToDos(){
-    const loadedToDos = localStorage.getItem(TODOS_LS);
-    if (loadedToDos !== null) {
-        const parsedToDos = JSON.parse(loadedToDos);
-        parsedToDos.forEach(function(toDO){
-            paintToDo(toDo.text);
-        });
-    }
+function loadToDos() {
+  const loadedToDos = localStorage.getItem(TODOS_LS);
+  if (loadedToDos !== null) {
+    const parsedToDos = JSON.parse(loadedToDos);
+    parsedToDos.forEach(function(toDo) {
+    paintToDo(toDo.text);
+    });
+  }
 }
 
 
@@ -73,4 +84,5 @@ function init(){
     loadToDos();
     toDoForm.addEventListener("submit", handleSubmit);
 }
+
 init();

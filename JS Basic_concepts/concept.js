@@ -128,8 +128,23 @@ let x; // undefined ex.
 
 
 
+//? 4] Symbol - map이나 다른 자료구조에서 고유한 식별자가 필요하거나, 동시다발적으로 일어날 수 있는 코드에서 우선순위를 주고싶을때, 정말 고유한 식별자가 필요할 때 사용함. 
+/*
+   간혹 식별자를 string으로 사용하는 경우도 있지만 string은 다른 모듈이나 다른 파일에서
+   동일한 string을 쓸때, 동일한 식별자로 간주됨
+   하지만 반대로 symbol같은 경우는 동일한 값이라도 서로 다른 것으로 간주한다. 
+   
+*///ex) 검사해보기
+const symbol1 = Symbol("id");
+const symbol2 = Symbol("id");
+console.log(symbol1 === symbol2);
 
+// if 동일한 symbol로 만들고 싶다면, 
+const symbol1 = Symbol.for("id");
+const symbol2 = Symbol.for("id");
+console.log(symbol1 === symbol2); //true
 
-
+// sting과 함께 사용하고 싶다면 (.description을 사용해서 string으로 변형해서 사용해줘야됨.)
+console.log(`value: ${symbol1.description}`)
 
 

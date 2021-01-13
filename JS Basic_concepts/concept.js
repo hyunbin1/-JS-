@@ -79,3 +79,19 @@ ex] number, string, boolean, null, undefined, symbol
 */ 
 
 
+//? 1] number - 숫자 할당은 종류에 상관 없이 number로 여겨지기 때문에 특별히 할당해주지 않아도 된다.
+// javaScirpt에서 사용하는 법:
+let a : 12;
+//type script에서는 let a: number = 12;
+
+//! 특별한 값이 먼저 정해져 있는 경우: 무한대, -무한대, 숫자가 아닌경우(not a number - nan) (총 3가지)
+const infinity = 1/0;
+const negativeInfinity = -1/0;
+const nAn ='not a number'/2;
+const.log(infinity);
+const.log(negativeInfinity); 
+const.log(nAn);
+
+// bigInt = 기존의 숫자의 범위는 (-2*53 ~ 2*53)까지만 된다. -123151n 처럼 숫자 뒤에 n을 붙이면 bigInt로 여겨짐 - 크롬과 firefox에서만 지원이 된다.
+
+

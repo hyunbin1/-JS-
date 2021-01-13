@@ -20,10 +20,12 @@ html parsing과 fetching js를 병렬로 한 후에 html parsing이 모두 >>끝
 
 */
 
-
-
 // html 검사에서 콘솔에서 작동확인하기 - ctrl+shift+i
 console.log("Hello World!");
+
+
+
+
 
 //# 1. 변수(변경될 수 있는 값):
 // -선언- let (added in ES6) = let이 유일한 방법.
@@ -58,6 +60,8 @@ console.log(name);
 
 
 
+
+
 //# 2. Constants: 값을 할당한 이후 변경할 수 없음. (변수와의 차이점)
 /* favor immutable data type always for a few reasons:
 1. 보안
@@ -66,6 +70,8 @@ console.log(name);
 */
 const dayInWeek = 7;
 const maxNumber = 5;
+
+
 
 
 
@@ -98,10 +104,27 @@ const.log(nAn);
 //? 2] String(문자) - 모두 1가지 타입으로 정의됨 
 //출력 ex]
 const char = "c";
-const brendan = "bread";
+const brendan = "변수";
 const greeting = "hello " + brendan;
-const template literals = `This is string and {brendan} this is 변수 haha`;
+const template literals = `This is string and this is ${brendan}`;
 
+//cf) type 찾기
+console.log(type: ${typeof greeting}');
+
+            
+//? 3] Boolean
+// False: 0,null, undefined, NaN, ""(=비어져있는 string)
+// True: 다른 모든 값들 
+// ex] 
+const canRead = true;
+const test = 3<1; // false
+console.log('value: ${test}')
+
+// null: 텅텅 비어있어, 아무것도 없음
+let nothing = null;
+
+//undefined - 선언은 되었지만 아무 값도 지정되어 있지 않음. 따라서 텅텅 비었는지, 지정되었는지 아직 모름.
+let x; // undefined ex.
 
 
 

@@ -69,6 +69,13 @@ const maxNumber = 5;
 
 
 
-
+//# 3. 데이터 타입 알아보기(=Variable types) -> [primitive type, object type, 그리고 function으로 이루어져 있음]
+/* 
+1) primitive type = single item - 더이상 작은 단위로 나누어 질 수 없는 단위
+ex] number, string, boolean, null, undefined, symbol
+2) object type = box container - single item들을 여러개 묶어서 한개의 단위 or 하나의 box로 관리할 수 있게 해주는 것. 
+3) fuction, first-class function - 이 언어에서는 다른 데이터 타입처럼 변수에 할당이 가능하고
+함수의 파라미터(인자)로더 전달이 되고 return 타입으로 return이 가능하다. 
+*/ 
 
 

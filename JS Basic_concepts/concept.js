@@ -95,3 +95,18 @@ const.log(nAn);
 // bigInt = 기존의 숫자의 범위는 (-2*53 ~ 2*53)까지만 된다. -123151n 처럼 숫자 뒤에 n을 붙이면 bigInt로 여겨짐 - 크롬과 firefox에서만 지원이 된다.
 
 
+//? 2] String(문자) - 모두 1가지 타입으로 정의됨 
+//출력 ex]
+const char = "c";
+const brendan = "bread";
+const greeting = "hello " + brendan;
+const template literals = `This is string and {brendan} this is 변수 haha`;
+
+
+
+
+
+
+
+
+

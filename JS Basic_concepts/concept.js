@@ -27,11 +27,13 @@ console.log("Hello World!");
 
 //# 1. 변수(변경될 수 있는 값):
 // -선언- let (added in ES6) = let이 유일한 방법.
-/* name이라는 변수를 정의(선언)하게 되면 name이라는 변수가 메모리(비어있는 박스들)중 
+/* -원리- name이라는 변수를 정의(선언)하게 되면 name이라는 변수가 메모리(비어있는 박스들)중 
    name이 할당된 있는 위치를 가리키게(포인팅) 되게 저장한다.  */
-//!var은 더이상 사용하지 않는다. 
+
+//! var은 더이상 사용하지 않는다. 
 //? 이유1. var hoisting: 변수를 선언하기 전에 변수를 사용하는 비정상적인 짓을 막지 않고 그대로 냅두기 때문에.
 //? 이유2. block scope(지역변수)를 사용하지 못함.
+
 /* ex] ( 이게 출력되면 비정상인데도 출력이 됨. => 문제 정의: var hoisting이라고 함 = 어디에 선언했는지 
 상관없이 항상 제일 위로 선언을 끌어 올려주는것.)
 console.log(age);
@@ -50,6 +52,23 @@ console.log(name);
 name = "hello";
 console.log(name);
 }
+
 /*lobal Scope(전역변수) - {}사용하지 않는 것.:
   최소한으로 쓰는 것이 좋다. ex) class, 함수, if, for로만 사용하여 쓰는 것이 좋다. */
+
+
+
+//# 2. Constants: 값을 할당한 이후 변경할 수 없음. (변수와의 차이점)
+/* favor immutable data type always for a few reasons:
+1. 보안
+2. 프로세스 안에서의 흐름의 안전성(=thread safety) (thread = 프로그램 or 프로세스 내에서 실행되는 흐름의 단위)
+3. 실수 방지 (reduce human mistakes)
+*/
+const dayInWeek = 7;
+const maxNumber = 5;
+
+
+
+
+
 

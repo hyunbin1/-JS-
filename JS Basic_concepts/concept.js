@@ -42,17 +42,17 @@ console.log(age);
 age = 4;
 var age;
 -> */
-let name = "ellie"; 
+let name = "ellie";
 console.log(name);
 name = "hello";
 console.log(name);
 
 // Block Scope(지역변수) - {}안에 있는 변수들은 이 안에서만 사용할 수 있다. 
 {
-let name = "ellie"; 
-console.log(name);
-name = "hello";
-console.log(name);
+   let name = "ellie";
+   console.log(name);
+   name = "hello";
+   console.log(name);
 }
 
 /*lobal Scope(전역변수) - {}사용하지 않는 것.:
@@ -80,22 +80,22 @@ const maxNumber = 5;
 1) primitive type = single item - 더이상 작은 단위로 나누어 질 수 없는 단위
 ex] number, string, boolean, null, undefined, symbol
 2) object type = box container - single item들을 여러개 묶어서 한개의 단위 or 하나의 box로 관리할 수 있게 해주는 것. 
-3) fuction, first-class function - 이 언어에서는 다른 데이터 타입처럼 변수에 할당이 가능하고
+3) function, first-class function - 이 언어에서는 다른 데이터 타입처럼 변수에 할당이 가능하고
 함수의 파라미터(인자)로더 전달이 되고 return 타입으로 return이 가능하다. 
-*/ 
+*/
 
 //! primitive type:
 //? 1] number - 숫자 할당은 종류에 상관 없이 number로 여겨지기 때문에 특별히 할당해주지 않아도 된다.
-// javaScirpt에서 사용하는 법:
-let a : 12;
+// javaScript에서 사용하는 법:
+let a: 12;
 //type script에서는 let a: number = 12;
 
 //! 특별한 값이 먼저 정해져 있는 경우: 무한대, -무한대, 숫자가 아닌경우(not a number - nan) (총 3가지)
-const infinity = 1/0;
-const negativeInfinity = -1/0;
-const nAn ='not a number'/2;
+const infinity = 1 / 0;
+const negativeInfinity = -1 / 0;
+const nAn = 'not a number' / 2;
 const.log(infinity);
-const.log(negativeInfinity); 
+const.log(negativeInfinity);
 const.log(nAn);
 
 // bigInt = 기존의 숫자의 범위는 (-2*53 ~ 2*53)까지만 된다. -123151n 처럼 숫자 뒤에 n을 붙이면 bigInt로 여겨짐 - 크롬과 firefox에서만 지원이 된다.
@@ -109,15 +109,14 @@ const greeting = "hello " + brendan;
 const template literals = `This is string and this is ${brendan}`;
 
 //cf) type 찾기
-console.log(type: ${typeof greeting}');
+console.log(type: ${ typeof greeting }');
 
-            
 //? 3] Boolean
 // False: 0,null, undefined, NaN, ""(=비어져있는 string)
 // True: 다른 모든 값들 
 // ex] 
 const canRead = true;
-const test = 3<1; // false
+const test = 3 < 1; // false
 console.log('value: ${test}')
 
 // null: 텅텅 비어있어, 아무것도 없음

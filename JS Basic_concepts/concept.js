@@ -150,7 +150,7 @@ console.log(`value: ${symbol1.description}`)
 
 
 
-/* 4. Dynamic typing(= dynamically typed language) - 선언할  어떤 타입인지 선언하지 않고
+/*# 4. Dynamic typing(= dynamically typed language) - 선언할  어떤 타입인지 선언하지 않고
 (run time)프로그램이 동작할 때 할당된 값에 따라 type이 변경될 수 있다는 것을 얘기한다. 
 */
 // 좋은 아이디어가 있을때 빠르게 프로토 타입을 할때는 유용함.
@@ -163,6 +163,10 @@ text = '8' / '2' // 모두 int 취급  -> 출력: 4 == 8/2를 실행함
 // 이렇게 되면 text.charAt(0); 으로 문자열의 0번째 숫자를 출력하라고 명령하면 에러가 뜸
 // 이러한 이유 때문에 typescript가 나온 것이다. 
 
+
+/*# 5. Operator */
+
+/*? */
 
 
 

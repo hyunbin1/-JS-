@@ -75,7 +75,7 @@ const maxNumber = 5;
 
 
 
-//# 3. 데이터 타입 알아보기(=Variable types) -> [primitive type, object type, 그리고 function으로 이루어져 있음]
+//# 3. 데이터 타입 알아보기(=Variable types - read/write 둘다 가능) -> [primitive type, object type, 그리고 function으로 이루어져 있음]
 /* 
 1) primitive type = single item - 더이상 작은 단위로 나누어 질 수 없는 단위
 ex] number, string, boolean, null, undefined, symbol
@@ -162,6 +162,7 @@ text = "7" + 5; // 모두 string 취급 -> 출력: 75
 text = '8' / '2' // 모두 int 취급  -> 출력: 4 == 8/2를 실행함 
 // 이렇게 되면 text.charAt(0); 으로 문자열의 0번째 숫자를 출력하라고 명령하면 에러가 뜸
 // 이러한 이유 때문에 typescript가 나온 것이다. 
+
 
 
 

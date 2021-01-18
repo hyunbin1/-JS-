@@ -252,8 +252,25 @@ if (name !== "hyunbin" ){
 }
 
 
+/*? 9. Ternary operation */
+// 조건문 == ?, 값 비교는 :로 한다
+console.log(name === "hyunbin" ? 'yes' : 'no'); // ? 전에 있는 것이 True니? True면 왼쪽 False면 오른쪽 것을 출력하렴.
 
-
+/*? 10. Switch */
+// case에서 true인 것만 출력한다.
+const browser = "Firefox";
+switch(browser){
+   case "IE":
+      console.log("go away!");
+      breack;
+   case "Firefox";
+   case "Chrome";   
+      console.log("Come on!")
+      break
+} // 출력: Come on!
+      
+      
+   
 
 
 

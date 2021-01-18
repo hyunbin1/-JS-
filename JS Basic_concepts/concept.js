@@ -294,6 +294,28 @@ for (let i = 3; i > 0; i = i-2){
    console.log(`inline variable for: ${i}`);
 }
 
+/* nested loops (cpu한테 안좋음,, O(n**2)) */
+for (let i = 0; i <11; i++){
+   for (let j = 0; j <10; j++ ){
+   console.log(`i: ${i}, j:${j}`);
+   }
+}
+
+//[quiz]
+// (짝수만)
+for (let i = 0; i <10; i++){
+   if(i % 2 === 0){
+   console.log(i);
+   }
+}
+// (8일때 break)
+for( let j = 0; j <10; j++){
+   if(j > 8){
+break;
+}
+console.log(j)
+}
+ 
 
 
 

@@ -171,7 +171,6 @@ console.log('my'+' cat'); // 출력: my cat
 console.log('1'+2); // 출력: 12
 console.log(`string literals(``을 사용하면 ''같은 특수 문자 표기도 가능): 1 + 2 =${1+2}`); // 출력: string literals: 1 + 2 = 3 (${안에 있는 값 계산 후 출력함.})
 
-
 /*? 2. Numeric operators */
 console.log(1 + 1) // 출력: 2 (add)
 console.log(1 - 1) // 출력: 0 (substract)
@@ -190,6 +189,33 @@ const postIncrement = counter++; // postIncrement = 2, counter = 3
 const preDecrement = --counter; // preDecrement = 1, counter = 1;
 const postDecrement = counter--; // postDecrement = 2, counter = 1;
 
+/*? 4. Assignment operators */
+let x = 3;
+let y = 6; 
+x += y; // x = x + y;
+x -= y; // x = x-y
+x *= y; // x = x * y 
+x /= y; // x = x / y
 
+/*? 5. Conparison operators */
+console.log(10<6); //
+console.log(10<=6); //
 
+/*? 6. Logical operators: || (or), && (and), ! (not)*/
+const value1 = false;
+const vlaue2 = 4<2;
+
+// || (Or - 처음에 true가 나오면 뒤는 살펴보지 않는다는게 point! 따라서 인자를 여러개 넣을때에는 simple 한것 순으로 넣자. )
+console.log(`Or: ${value1 || value2 || check()}`);
+
+// && (And - 처음에 false가 나오면 뒤에는 살표보지 않음. 따라서 인자를 여러개 넣을때에는 simple 한것 순으로 넣자. ) 
+// ! (Not 연산자 - 값을 반대로 바꿔준다.)
+
+function check(){ // check = 시간을 지연하지만 True를 결국 도출한다. 
+for (let i = 0; i < 10; i++){
+   //wasting time
+   console.log("^^");
+   }
+   return True;
+};
 

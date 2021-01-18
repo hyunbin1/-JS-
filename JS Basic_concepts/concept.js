@@ -267,11 +267,32 @@ switch(browser){
    case "Chrome";   
       console.log("Come on!")
       break
-} // 출력: Come on!
-      
-      
+}; // 출력: Come on!
+  
+/*? 10. Loops 조건에 맞는 것이 나올때까지 계속 반복 */
+let i = 3;
+while(i > 0) {
+   console.log(`while: ${i}`);
+   i--;
+}
+//3 -> 2 -> 1
    
+ /* Do while loop  - do에 할당된 블럭만큼 먼저 실행을 한 후에 while 조건문을 살펴본다. */
+do{
+   console.log(`do while: ${i}`);
+i--;
+} while(i>0);
+// 출력: 3-> 2 -> 1 -> 0
 
+/* for loops for(begin; condition; step)*/
+for (i=3; i >0; i--){
+   console.log(`for: ${i}`);
+}
+
+for (let i = 3; i > 0; i = i-2){
+// inline variable declaration (let을 사용해, 지역변수를 선언해줘서 for 안에서만 사용하기)
+   console.log(`inline variable for: ${i}`);
+}
 
 
 

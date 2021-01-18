@@ -172,5 +172,12 @@ console.log('1'+2); // 출력: 12
 console.log(`string literals(``을 사용하면 ''같은 특수 문자 표기도 가능): 1 + 2 =${1+2}`); // 출력: string literals: 1 + 2 = 3 (${안에 있는 값 계산 후 출력함.})
 
 
+/*? 2. Numeric operators */
+console.log(1 + 1) // 출력: 2 (add)
+console.log(1 - 1) // 출력: 0 (substract)
+console.log(1 / 1) // 출력: 1 (divide)
+console.log(1 * 1) // 출력: 1 (multiple)
+console.log(5 % 2) // 출력: 1 (remainder)
+console.log(2 ** 3) // 출력: 8 (exponentiation)
 
 

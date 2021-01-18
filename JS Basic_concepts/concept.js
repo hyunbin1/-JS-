@@ -219,3 +219,43 @@ for (let i = 0; i < 10; i++){
    return True;
 };
 
+/*? 7. equality */
+
+// == loose equality, with type conversi
+// ==를 사용하면 type이 달라도 내용물이 같으면 True로 출력한다. 
+const StringFive = "5";
+const numberFive = 5;
+
+console.log(stringFive == numberFive); //  True
+console.log(stringFive != numberFive); //  False
+console.log(stringFive === numberFive); //  False
+console.log(stringFive !== numberFive); //  True
+// 복기 - 0, null, ""(empty string) == false
+console.log(0 == false); // True - false는 boolean이다.
+console.log(0 === flase); // False
+console.log("" == false); // True
+console.log("" === flase); // False
+console.log(null == undifined); // True
+console.log(null === undefined); // False
+
+
+
+/*? 8. 조건문(Conditional operators: if) */
+// if, if else, else
+const name = "hyunbin";
+if (name !== "hyunbin" ){
+   console.log("You are amazing coder");   
+} else if(name ==- "hyunbin"){
+         console.log("That\'s right!");
+}else{
+  console.log("hi");
+}
+
+
+
+
+
+
+
+
+

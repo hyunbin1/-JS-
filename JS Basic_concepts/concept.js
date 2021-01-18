@@ -166,8 +166,10 @@ text = '8' / '2' // 모두 int 취급  -> 출력: 4 == 8/2를 실행함
 
 /*# 5. Operator */
 
-/*? */
-
+/*? 1. String concatenation*/
+console.log('my'+' cat'); // 출력: my cat
+console.log('1'+2); // 출력: 12
+console.log(`string literals(``을 사용하면 ''같은 특수 문자 표기도 가능): 1 + 2 =${1+2}`); // 출력: string literals: 1 + 2 = 3 (${안에 있는 값 계산 후 출력함.})
 
 
 

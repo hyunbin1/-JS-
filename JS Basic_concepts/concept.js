@@ -180,4 +180,16 @@ console.log(1 * 1) // 출력: 1 (multiple)
 console.log(5 % 2) // 출력: 1 (remainder)
 console.log(2 ** 3) // 출력: 8 (exponentiation)
 
+/*? 3. Increment & decrement operators*/
+let counter = 2;
+const preIncrement = ++counter; // preIncrement = 3, counter = 3
+// 과정: 1. counter = counter +1 한 후 2. preIncrement = counter처럼 대입연산자를 해줌
+const postIncrement = counter++; // postIncrement = 2, counter = 3
+//과정: 1. postIncrement = conter - 대입부터한다. 2. counter = counter + 1
+// 차이점
+const preDecrement = --counter; // preDecrement = 1, counter = 1;
+const postDecrement = counter--; // postDecrement = 2, counter = 1;
+
+
+
 

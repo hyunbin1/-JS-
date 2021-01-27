@@ -361,3 +361,24 @@ function showMessage(message, from = "unknown"){
 }
 
 showMessage("Hi!");
+
+//? 4. Rest parameters (added in ES6 - 배열 파라미터)
+// ...args 이름을 사용하면 배열로 데이터가 저장된다.
+function printAll(...args){
+   for (let i =0; i < args.length; i++){
+      console.log(args[i]);
+   }
+   // args의 값들이 위와 같이 하나씩 출력이 된다. 
+   for (const arg of args){
+      console.log(arg)
+   }
+}
+printAll('dream', 'coding', 'ellie');
+
+//? 5. Local scope
+//? 6. Return a value
+function sum(a,b){
+   return a+b;
+}
+const result = sum(1,2); // 3
+console.log(`sum: ${sum(1,2)}`);

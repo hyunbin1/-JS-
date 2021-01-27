@@ -382,3 +382,23 @@ function sum(a,b){
 }
 const result = sum(1,2); // 3
 console.log(`sum: ${sum(1,2)}`);
+
+
+//? 7. Early return, early exit
+// bad example
+function upgradeUser(user){
+   if (user.point > 10){
+      // long~~ upgrade logic 
+      // 조건이 맞지 않을 때는 계산이 짧아지도록 빠르게 리턴하고 시작하기
+   }
+}
+
+// good example
+function upgradeUser1(user){
+   if (user.point <= 10){
+      return;
+   }
+   // long Upgrade Logic - new start!
+   // 조건이 맞을때만 필요한 로직을 사용하기!
+}
+

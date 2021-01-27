@@ -352,3 +352,12 @@ function changeName(obj){
 const ellie = { name : "ellie" };
 changeName(ellie);
 console.log(ellie);
+
+//? 3.Default parameters (added in ES6)
+// 만약 사용자가 맨 아레 HI라고 한것과 같이 정의된 파라미터를 사용하지 않으면 이제
+// 파라미터 from 옆에 = "unknown"과 같이 default값을 사용해서 지정해 줄 수 있다. 
+function showMessage(message, from = "unknown"){
+   console.log(`${message} by ${from}`);
+}
+
+showMessage("Hi!");

@@ -353,6 +353,7 @@ const ellie = { name : "ellie" };
 changeName(ellie);
 console.log(ellie);
 
+
 //? 3.Default parameters (added in ES6)
 // 만약 사용자가 맨 아레 HI라고 한것과 같이 정의된 파라미터를 사용하지 않으면 이제
 // 파라미터 from 옆에 = "unknown"과 같이 default값을 사용해서 지정해 줄 수 있다. 
@@ -383,8 +384,7 @@ function sum(a,b){
 const result = sum(1,2); // 3
 console.log(`sum: ${sum(1,2)}`);
 
-
-//? 7. Early return, early exit
+//? Early return, early exit
 // bad example
 function upgradeUser(user){
    if (user.point > 10){
@@ -401,4 +401,33 @@ function upgradeUser1(user){
    // long Upgrade Logic - new start!
    // 조건이 맞을때만 필요한 로직을 사용하기!
 }
+
+// 8. Callback fucntion
+
+function randomQuiz(answer, printYes, printNo){
+   if (answer === ' love you'){
+      printYes();
+   } else{
+      printNo();
+   }
+}
+// anonymous function
+const printYes = function () {
+   console.log('yes!');
+};
+// named function
+const printNo = function printNO() {
+   console.log('No!');
+};
+randomQuiz("wrong", printYes, printNo);
+randomQuiz("love you", printYes, printNo);
+
+//? 9. Arrow function (= anonymous fucntion) - 간단하게 함수를 만들 수 있음.
+const simplePrint = function(){
+   console.log('simplePrint!')
+};
+// const 함수이름 = (파라미터 장소) => return값 
+const simplePrint = () => console.log('simplePrint');
+const add = (a,b) => a + b;
+
 

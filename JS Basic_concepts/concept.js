@@ -340,3 +340,15 @@ console.log(message);
 return 0;
 } 처럼 type을 사용한다. 
 */
+
+
+//? 2. Parameters
+// premitie같은 경우에는 값이 전달이 되고 , object 같은경우 reference가 메모리에 전달이 된다. 
+// ex]
+function changeName(obj){
+   obj.name = "coder";
+}
+
+const ellie = { name : "ellie" };
+changeName(ellie);
+console.log(ellie);

@@ -461,3 +461,38 @@ class Person{
 const ellie = new Person('ellie', 20);
 //이렇게 하면 ellie.name을 하게되면 이름이 나오는 것처럼 입력한 데이터가 나온다. 
 ellie.speak(); // ellie 메소드 호출하기
+
+
+
+//? 2. Getter, Setter - 사용자가 우리가 만든 시스템을 잘못 사용하지못하게 세팅하기
+// get은 값을 return하고 set은 값을 설정한다. 
+// getter와 setter 안에 쓰이는 변수이름은 무한 루프가 될 수 있기 때문에 바꿔준다.
+// 결국 constructor 필는 firstName, lastname, _age가 된다. 
+class User {
+   constructor(firstName, lastName, age){
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.age = age;
+   }
+   get age() {
+      return this._age;
+   }
+
+   set age(value){
+      /*
+      if (value < 0 ){
+         throw Error('age can not be negative');
+      }
+      OR 다른 방법은
+      vlalue < 0 값이 0이하라면 ? 0을 쓰고 아니면 지정된 value를 쓰겠다고 표시해줌
+      */ 
+      this._age= value < 0 ? 0 : value;
+   }
+}
+
+const hyunbin = New User('Hyunbin', 'kim', -1)
+
+
+
+
+

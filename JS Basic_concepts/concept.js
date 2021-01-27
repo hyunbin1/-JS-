@@ -434,3 +434,30 @@ const add = (a,b) => a + b;
 {(function hello() {
    console.log('IIFE')
 })();}
+
+
+//! Class 
+// 선언은 한번만, 틀만 지정되어 있어, 실제 데이터가 들어 있지는 않고 데이터를 조작할 틀만 들어있다. 
+// 그리고 그 틀에 데이터를 넣어사 사용한 것을 object라고 한다. 
+// 프로토 타입을 기반한 문자(문법) 상으로만의 class 이다.
+
+//? 1. class 선언 - 데이터인 field와 함수인 method가 있다.
+class Person{
+   // 생성자
+   constuctor(name, age){
+      //field
+      this.name = name;
+      this.age = age;
+   }
+   //methods
+   speak(){
+      console.log(`${this.name}: hello!`);
+   }
+}
+
+//! object
+// class를 사용하여 만든 값으로, 많이 만들어지고 사용될 수 있고, 실제 데이터가 들어있어 조작된 것이다.
+// 새로운 객체(object)를 만들때에는 new를 사용한다. 
+const ellie = new Person('ellie', 20);
+//이렇게 하면 ellie.name을 하게되면 이름이 나오는 것처럼 입력한 데이터가 나온다. 
+ellie.speak(); // ellie 메소드 호출하기

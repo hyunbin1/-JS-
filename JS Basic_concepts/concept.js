@@ -430,4 +430,7 @@ const simplePrint = function(){
 const simplePrint = () => console.log('simplePrint');
 const add = (a,b) => a + b;
 
-
+//? 10. 함수를 따로 표기하지 않아도 바로 호출해주는 방법 = IIFE = Immediately Invoked Function Expression
+{(function hello() {
+   console.log('IIFE')
+})();}

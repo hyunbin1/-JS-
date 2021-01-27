@@ -317,5 +317,21 @@ console.log(j)
 }
  
 
+//!  function : 여러번 재사용이 가능하다. 한가지의 업무나, 계사능ㄹ 하기 위해 사용한다. 
+// 구성: 함수이름(파라미터 1, 파라미터2){body... return;}
+// 이름 정하기 = 동사형태 - doSometing, command, verb - 하나의 함수는 하나의 업무, 동사로만 사용되야 된다.
+
+function printHello(){
+   console.log("hello");
+}
+printHello();
+
+//조금 더 복잡하게
+
+fuction log(message){
+ console.log(message);
+}
+log("원하는 메세지 입력");
+log(1234); // 정수도 가능
 
 

@@ -492,7 +492,7 @@ class User {
 
 const hyunbin = New User('Hyunbin', 'kim', -1)
 
-
+https://www.youtube.com/watch?v=_DLhUBWsRtw&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=6
 
 
 

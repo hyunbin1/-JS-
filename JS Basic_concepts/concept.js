@@ -334,4 +334,9 @@ fuction log(message){
 log("원하는 메세지 입력");
 log(1234); // 정수도 가능
 
-
+/* type scripts에서는 - string은 type이고, :number는 변환되는 값이다.
+function log(message: string): number{
+console.log(message);
+return 0;
+} 처럼 type을 사용한다. 
+*/

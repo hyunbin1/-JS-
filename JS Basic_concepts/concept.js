@@ -496,3 +496,56 @@ https://www.youtube.com/watch?v=_DLhUBWsRtw&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6
 
 
 
+
+/* JSON */
+
+// 1. object -> JSON 변환
+
+let json = JSON.stringify(true);
+console.log(json); // ture
+
+json = JSON.stringify(['apple', 'banana']);
+console.log(json); // ["apple", "banan"] - ""는 json에서 규정한 것
+
+const rabbit = {
+   name: "tori",
+   color: 'white',
+   size: null,
+   birthDate: new Date,
+   // simbol같은 JS에만 있는 자체 데이터 타입은 json에 포함되지 않음
+   simbol: Symbol('id'),
+   // 함수는 object에 있는 데이터가 아니기 때문에 출력에 제외됨
+   jump: () => {
+      console.log(`${name} can jump!`);
+   },
+};
+json = JSON.stringify(rabbit);
+console.log(json);
+// 출력: {"name":"tori","color":"white","size":null,"birthDate":"2021-02-03T18:57:20.670Z"}
+json = JSON.stringify(rabbit, ['name', 'color']);
+// 출력: {"name": "tori", "color":"white"}
+
+//! 콜백함수:
+json = JSON.stringify(rabbit, (key, value)=> {
+   console.log(`key: ${key}, value: ${value}`);
+   return value;
+});
+console.log(json);
+/*
+! 맨처음 출력되는 것은 name이 아니라 이를 감싸고 있는 객체이다.  
+출력: key: , value: [object Object]
+key: name, vlaue: tori
+key: color, value: white
+...
+
+*/
+json = JSON.stringify(rabbit, (key, value)=> {
+   console.log(`key: ${key}, value: ${value}`);
+   // 특정한 값 바꾸기
+   return key === 'name' ? 'ellie' : value;
+});
+console.log(json);
+// 출력: "name":"ellie", "color": "white", "size",,,
+
+
+// 2. JSON -> object로 변환

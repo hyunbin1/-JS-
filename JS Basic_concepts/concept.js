@@ -485,19 +485,19 @@ class User {
       }
       OR 다른 방법은
       vlalue < 0 값이 0이하라면 ? 0을 쓰고 아니면 지정된 value를 쓰겠다고 표시해줌
-      */ 
-      this._age= value < 0 ? 0 : value;
+      */ -
+      this._age = value < 0 ? 0 : value;
    }
 }
 
-const hyunbin = New User('Hyunbin', 'kim', -1)
+const hyunbin = new User('Hyunbin', 'kim', -1)
 
 https://www.youtube.com/watch?v=_DLhUBWsRtw&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=6
 
 
 
 
-/* JSON */
+/*! JSON */
 
 // 1. object -> JSON 변환
 

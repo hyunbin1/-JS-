@@ -507,6 +507,7 @@ console.log(json); // ture
 json = JSON.stringify(['apple', 'banana']);
 console.log(json); // ["apple", "banan"] - ""는 json에서 규정한 것
 
+// 계속 쓰일 함수 정의
 const rabbit = {
    name: "tori",
    color: 'white',
@@ -519,6 +520,9 @@ const rabbit = {
       console.log(`${name} can jump!`);
    },
 };
+
+
+
 json = JSON.stringify(rabbit);
 console.log(json);
 // 출력: {"name":"tori","color":"white","size":null,"birthDate":"2021-02-03T18:57:20.670Z"}
@@ -549,3 +553,32 @@ console.log(json);
 
 
 // 2. JSON -> object로 변환
+// stringify할때는 함수가 출력이 되지 않지만 parse를 할때는 출력된다. 
+// parse(json) 
+console.clear();
+json = JSON.stringify(rabbit);
+console.log(json);
+
+// 기본형: 
+const obj = JSON.parse(json);
+console.log(obj);
+// 출력: {name: "tori", color: "white", ...}
+
+
+// 기존 함수 사용해보기
+rabbit.jump(); // 출력: can jump! (위에서 삽입해 놓았던 내용)
+console.log(rabbit.birthDate.getDate()); // 출력: 29
+// 하지만 지금 obj는 json 이라는 함수를 stirngify 한 다음에 다시 변형시킨 내용이라, 함수가 출력되지 않는다.
+obj.jump(); // 에러 발생
+console.log(obj.birthDate.getDate()); // 에러 - stirngify 후 parsing 한 데이터는 더 이상 함수가 아니라 str이기 때문이다. 
+console.log(obj.birthDate); // 출력: 지금 날짜
+
+// 콜백함수 받기
+const obj = JSON.parse(json, (key,value) => {
+   console.log(`key: ${key}, value: ${value}`);
+   return key === "birthDate" ? new Date(value) : value;
+});
+
+console.log(obj.birthDate.getDate()); // 출력: 29 
+
+

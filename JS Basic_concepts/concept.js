@@ -167,9 +167,9 @@ text = '8' / '2' // 모두 int 취급  -> 출력: 4 == 8/2를 실행함
 /*# 5. Operator */
 
 /*? 1. String concatenation*/
-console.log('my'+' cat'); // 출력: my cat
-console.log('1'+2); // 출력: 12
-console.log(`string literals(``을 사용하면 ''같은 특수 문자 표기도 가능): 1 + 2 =${1+2}`); // 출력: string literals: 1 + 2 = 3 (${안에 있는 값 계산 후 출력함.})
+console.log('my' + ' cat'); // 출력: my cat
+console.log('1' + 2); // 출력: 12
+console.log(`string literals(``을 사용하면 ''같은 특수 문자 표기도 가능): 1 + 2 =${1 + 2}`); // 출력: string literals: 1 + 2 = 3 (${안에 있는 값 계산 후 출력함.})
 
 /*? 2. Numeric operators */
 console.log(1 + 1) // 출력: 2 (add)
@@ -191,19 +191,19 @@ const postDecrement = counter--; // postDecrement = 2, counter = 1;
 
 /*? 4. Assignment operators */
 let x = 3;
-let y = 6; 
+let y = 6;
 x += y; // x = x + y;
 x -= y; // x = x-y
 x *= y; // x = x * y 
 x /= y; // x = x / y
 
 /*? 5. Conparison operators */
-console.log(10<6); //
-console.log(10<=6); //
+console.log(10 < 6); //
+console.log(10 <= 6); //
 
 /*? 6. Logical operators: || (or), && (and), ! (not)*/
 const value1 = false;
-const vlaue2 = 4<2;
+const vlaue2 = 4 < 2;
 
 // || (Or - 처음에 true가 나오면 뒤는 살펴보지 않는다는게 point! 따라서 인자를 여러개 넣을때에는 simple 한것 순으로 넣자. )
 console.log(`Or: ${value1 || value2 || check()}`);
@@ -211,10 +211,10 @@ console.log(`Or: ${value1 || value2 || check()}`);
 // && (And - 처음에 false가 나오면 뒤에는 살표보지 않음. 따라서 인자를 여러개 넣을때에는 simple 한것 순으로 넣자. ) 
 // ! (Not 연산자 - 값을 반대로 바꿔준다.)
 
-function check(){ // check = 시간을 지연하지만 True를 결국 도출한다. 
-for (let i = 0; i < 10; i++){
-   //wasting time
-   console.log("^^");
+function check() { // check = 시간을 지연하지만 True를 결국 도출한다. 
+   for (let i = 0; i < 10; i++) {
+      //wasting time
+      console.log("^^");
    }
    return True;
 };
@@ -243,12 +243,12 @@ console.log(null === undefined); // False
 /*? 8. 조건문(Conditional operators: if) */
 // if, if else, else
 const name = "hyunbin";
-if (name !== "hyunbin" ){
-   console.log("You are amazing coder");   
-} else if(name ==- "hyunbin"){
-         console.log("That\'s right!");
-}else{
-  console.log("hi");
+if (name !== "hyunbin") {
+   console.log("You are amazing coder");
+} else if (name == - "hyunbin") {
+   console.log("That\'s right!");
+} else {
+   console.log("hi");
 }
 
 
@@ -259,69 +259,69 @@ console.log(name === "hyunbin" ? 'yes' : 'no'); // ? 전에 있는 것이 True�
 /*? 10. Switch */
 // case에서 true인 것만 출력한다.
 const browser = "Firefox";
-switch(browser){
+switch (browser) {
    case "IE":
       console.log("go away!");
       breack;
    case "Firefox";
-   case "Chrome";   
+   case "Chrome";
       console.log("Come on!")
       break
 }; // 출력: Come on!
-  
+
 /*? 10. Loops 조건에 맞는 것이 나올때까지 계속 반복 */
 let i = 3;
-while(i > 0) {
+while (i > 0) {
    console.log(`while: ${i}`);
    i--;
 }
 //3 -> 2 -> 1
-   
- /* Do while loop  - do에 할당된 블럭만큼 먼저 실행을 한 후에 while 조건문을 살펴본다. */
-do{
+
+/* Do while loop  - do에 할당된 블럭만큼 먼저 실행을 한 후에 while 조건문을 살펴본다. */
+do {
    console.log(`do while: ${i}`);
-i--;
-} while(i>0);
+   i--;
+} while (i > 0);
 // 출력: 3-> 2 -> 1 -> 0
 
 /* for loops for(begin; condition; step)*/
-for (i=3; i >0; i--){
+for (i = 3; i > 0; i--) {
    console.log(`for: ${i}`);
 }
 
-for (let i = 3; i > 0; i = i-2){
-// inline variable declaration (let을 사용해, 지역변수를 선언해줘서 for 안에서만 사용하기)
+for (let i = 3; i > 0; i = i - 2) {
+   // inline variable declaration (let을 사용해, 지역변수를 선언해줘서 for 안에서만 사용하기)
    console.log(`inline variable for: ${i}`);
 }
 
 /* nested loops (cpu한테 안좋음,, O(n**2)) */
-for (let i = 0; i <11; i++){
-   for (let j = 0; j <10; j++ ){
-   console.log(`i: ${i}, j:${j}`);
+for (let i = 0; i < 11; i++) {
+   for (let j = 0; j < 10; j++) {
+      console.log(`i: ${i}, j:${j}`);
    }
 }
 
 //[quiz]
 // (짝수만)
-for (let i = 0; i <10; i++){
-   if(i % 2 === 0){
-   console.log(i);
+for (let i = 0; i < 10; i++) {
+   if (i % 2 === 0) {
+      console.log(i);
    }
 }
 // (8일때 break)
-for( let j = 0; j <10; j++){
-   if(j > 8){
-break;
+for (let j = 0; j < 10; j++) {
+   if (j > 8) {
+      break;
+   }
+   console.log(j)
 }
-console.log(j)
-}
- 
+
 
 //!  function : 여러번 재사용이 가능하다. 한가지의 업무나, 계사능ㄹ 하기 위해 사용한다. 
 // 구성: 함수이름(파라미터 1, 파라미터2){body... return;}
 // 이름 정하기 = 동사형태 - doSometing, command, verb - 하나의 함수는 하나의 업무, 동사로만 사용되야 된다.
 
-function printHello(){
+function printHello() {
    console.log("hello");
 }
 printHello();
@@ -329,7 +329,7 @@ printHello();
 //조금 더 복잡하게
 
 fuction log(message){
- console.log(message);
+   console.log(message);
 }
 log("원하는 메세지 입력");
 log(1234); // 정수도 가능
@@ -345,11 +345,11 @@ return 0;
 //? 2. Parameters
 // premitie같은 경우에는 값이 전달이 되고 , object 같은경우 reference가 메모리에 전달이 된다. 
 // ex]
-function changeName(obj){
+function changeName(obj) {
    obj.name = "coder";
 }
 
-const ellie = { name : "ellie" };
+const ellie = { name: "ellie" };
 changeName(ellie);
 console.log(ellie);
 
@@ -357,7 +357,7 @@ console.log(ellie);
 //? 3.Default parameters (added in ES6)
 // 만약 사용자가 맨 아레 HI라고 한것과 같이 정의된 파라미터를 사용하지 않으면 이제
 // 파라미터 from 옆에 = "unknown"과 같이 default값을 사용해서 지정해 줄 수 있다. 
-function showMessage(message, from = "unknown"){
+function showMessage(message, from = "unknown") {
    console.log(`${message} by ${from}`);
 }
 
@@ -365,12 +365,12 @@ showMessage("Hi!");
 
 //? 4. Rest parameters (added in ES6 - 배열 파라미터)
 // ...args 이름을 사용하면 배열로 데이터가 저장된다.
-function printAll(...args){
-   for (let i =0; i < args.length; i++){
+function printAll(...args) {
+   for (let i = 0; i < args.length; i++) {
       console.log(args[i]);
    }
    // args의 값들이 위와 같이 하나씩 출력이 된다. 
-   for (const arg of args){
+   for (const arg of args) {
       console.log(arg)
    }
 }
@@ -378,24 +378,24 @@ printAll('dream', 'coding', 'ellie');
 
 //? 5. Local scope
 //? 6. Return a value
-function sum(a,b){
-   return a+b;
+function sum(a, b) {
+   return a + b;
 }
-const result = sum(1,2); // 3
-console.log(`sum: ${sum(1,2)}`);
+const result = sum(1, 2); // 3
+console.log(`sum: ${sum(1, 2)}`);
 
 //? Early return, early exit
 // bad example
-function upgradeUser(user){
-   if (user.point > 10){
+function upgradeUser(user) {
+   if (user.point > 10) {
       // long~~ upgrade logic 
       // 조건이 맞지 않을 때는 계산이 짧아지도록 빠르게 리턴하고 시작하기
    }
 }
 
 // good example
-function upgradeUser1(user){
-   if (user.point <= 10){
+function upgradeUser1(user) {
+   if (user.point <= 10) {
       return;
    }
    // long Upgrade Logic - new start!
@@ -404,10 +404,10 @@ function upgradeUser1(user){
 
 // 8. Callback fucntion
 
-function randomQuiz(answer, printYes, printNo){
-   if (answer === ' love you'){
+function randomQuiz(answer, printYes, printNo) {
+   if (answer === ' love you') {
       printYes();
-   } else{
+   } else {
       printNo();
    }
 }
@@ -423,17 +423,19 @@ randomQuiz("wrong", printYes, printNo);
 randomQuiz("love you", printYes, printNo);
 
 //? 9. Arrow function (= anonymous fucntion) - 간단하게 함수를 만들 수 있음.
-const simplePrint = function(){
+const simplePrint = function () {
    console.log('simplePrint!')
 };
 // const 함수이름 = (파라미터 장소) => return값 
 const simplePrint = () => console.log('simplePrint');
-const add = (a,b) => a + b;
+const add = (a, b) => a + b;
 
 //? 10. 함수를 따로 표기하지 않아도 바로 호출해주는 방법 = IIFE = Immediately Invoked Function Expression
-{(function hello() {
-   console.log('IIFE')
-})();}
+{
+   (function hello() {
+      console.log('IIFE')
+   })();
+}
 
 
 //! Class 
@@ -442,15 +444,15 @@ const add = (a,b) => a + b;
 // 프로토 타입을 기반한 문자(문법) 상으로만의 class 이다.
 
 //? 1. class 선언 - 데이터인 field와 함수인 method가 있다.
-class Person{
+class Person {
    // 생성자
-   constuctor(name, age){
+   constuctor(name, age) {
       //field
       this.name = name;
       this.age = age;
    }
    //methods
-   speak(){
+   speak() {
       console.log(`${this.name}: hello!`);
    }
 }
@@ -469,7 +471,7 @@ ellie.speak(); // ellie 메소드 호출하기
 // getter와 setter 안에 쓰이는 변수이름은 무한 루프가 될 수 있기 때문에 바꿔준다.
 // 결국 constructor 필는 firstName, lastname, _age가 된다. 
 class User {
-   constructor(firstName, lastName, age){
+   constructor(firstName, lastName, age) {
       this.firstName = firstName;
       this.lastName = lastName;
       this.age = age;
@@ -478,23 +480,38 @@ class User {
       return this._age;
    }
 
-   set age(value){
-      /*
+   set age(value) {
+      // 방법 1
+      this._age = value < 0 ? 0 : value;
+
+      /* 방법 2
       if (value < 0 ){
          throw Error('age can not be negative');
       }
       OR 다른 방법은
-      vlalue < 0 값이 0이하라면 ? 0을 쓰고 아니면 지정된 value를 쓰겠다고 표시해줌
-      */ -
-      this._age = value < 0 ? 0 : value;
+      vlalue < 0 값이 0이하라면 ? 0을 쓰고 아니면 지정된 value를 쓰겠다고 표시해줌*/
    }
 }
 
 const hyunbin = new User('Hyunbin', 'kim', -1)
 
-https://www.youtube.com/watch?v=_DLhUBWsRtw&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=6
+//? 3. Fields(public, private)
+//# #변수 = private Fields - 클레스 내부에서만 값이 접근, 변경이 되지만, 외부에서는 읽을 수도 없음 - 매우 최근에 추가된 것
+// ex]
+class Experiment {
+   publicField = 2;
+   #privateField = 0;
+}
 
+const experiment = new Experiment();
+console.log(experiment.publicField); // 출력: 2
+console.log(experiment.privateField); // 출력 : undefine
 
+//? 4. Static // 이해안감,,
+
+class Article {
+
+}
 
 
 /*! JSON */
@@ -530,7 +547,7 @@ json = JSON.stringify(rabbit, ['name', 'color']);
 // 출력: {"name": "tori", "color":"white"}
 
 //! 콜백함수:
-json = JSON.stringify(rabbit, (key, value)=> {
+json = JSON.stringify(rabbit, (key, value) => {
    console.log(`key: ${key}, value: ${value}`);
    return value;
 });
@@ -543,7 +560,7 @@ key: color, value: white
 ...
 
 */
-json = JSON.stringify(rabbit, (key, value)=> {
+json = JSON.stringify(rabbit, (key, value) => {
    console.log(`key: ${key}, value: ${value}`);
    // 특정한 값 바꾸기
    return key === 'name' ? 'ellie' : value;
@@ -574,7 +591,7 @@ console.log(obj.birthDate.getDate()); // 에러 - stirngify 후 parsing 한 데�
 console.log(obj.birthDate); // 출력: 지금 날짜
 
 // 콜백함수 받기
-const obj = JSON.parse(json, (key,value) => {
+const obj = JSON.parse(json, (key, value) => {
    console.log(`key: ${key}, value: ${value}`);
    return key === "birthDate" ? new Date(value) : value;
 });

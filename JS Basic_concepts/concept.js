@@ -573,6 +573,33 @@ console.log('1');
 setTimeout(() => console.log('2'), 1000); // 1000 == 1초
 console.log('3');
 
+//? 1. 즉각적(동기적)으로 실행되는 콜백 == Synchronous callback
+
+function printImmediately(print) {
+   print();
+}
+printImmediately(() => console.log('hello'));
+
+/* 출력 : 
+1
+3
+hello
+(1초 후에) 2
+*/
+
+//? 2. 예측할 수 없는(비동기적으로) 실행되는 콜백 == Asynchronous call back
+
+function printWithDelay(print, timeout) {
+   setTimeout(print, timeout);
+}
+printWithDelay(() => console.log('async callback'), 2000);
+/*
+출력: 
+1
+3
+hello(1초 후에)
+async callback(2초 후에)
+*/
 
 
 

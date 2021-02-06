@@ -541,11 +541,11 @@ class Triangle extends Shape {
 // overwriting뿐만 아니라 부모의 함수도 같이 출력하고 싶다면 super을 사용해준다. 
 draw(){
    super.draw();
-   console.log("hi")
+   console.log("hi");
    // 출력: drawing red color!
    // hi
 }
- }
+}
 
 const rectangle = new Rectangle(20, 20, 'blue');
 rectangle.draw();
@@ -560,8 +560,18 @@ triangle.draw();
 console.log(rectangle instanceof Rectangle); // True 
 
 
+//! 동기와 비동기 처리
 
+/* 자바스크립트는 동기적인(synchronous) 아이이다. 
+hoisting이 끝난 후 코드가 작성된 순서에 따라 위에서 아래로 차례대로 진행이 되는 것을 동기라고 한다. 
+호이스팅 = var, 함수 선언(function declaration)이 코드를 읽을때 제일 위로 올라가는 것이다. 
+# asynchronous = 비동기적으로 언제 코드가 실행될지 예측할 수 없다.
+setTimeout() == 브라우저 Api -  우리가 지정한 시간이 지나면 우리가 지정한 함수를 콜백 하는 것이다. 
 
+*/
+console.log('1');
+setTimeout(() => console.log('2'), 1000); // 1000 == 1초
+console.log('3');
 
 
 

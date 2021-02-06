@@ -513,6 +513,63 @@ class Article {
 
 }
 
+//? 5. 상속 with extends - 기존에 만들어진 클레스를 다른 클레스에서 이어서 사용하는 방법
+
+class Shape {
+   constructor(width, height, color) {
+      this.width = width;
+      this.height = height;
+      this.color = color;
+   }
+   draw() {
+      console.log(`drawing ${this.color} color!`);
+   }
+
+   getArea() {
+      return this.width * this.height;
+   }
+}
+
+class Rectangle extends Shape { }
+class Triangle extends Shape {
+   // 삼각형에서는 넓이와 높이를 곱한 후에 2를 나누어줘야 된다. 
+   // overwriting - 필요한 함수만 재정리 해서 사용할 수 있다.
+   getArea{
+   return (this.width * this.height) / 2;
+}
+
+// overwriting뿐만 아니라 부모의 함수도 같이 출력하고 싶다면 super을 사용해준다. 
+draw(){
+   super.draw();
+   console.log("hi")
+   // 출력: drawing red color!
+   // hi
+}
+ }
+
+const rectangle = new Rectangle(20, 20, 'blue');
+rectangle.draw();
+
+const triangle = new Triangle(20, 20, 'blue');
+triangle.draw();
+
+
+
+//? 6. 왼쪽의 객체가 오른쪽에 있는 클레스인지 확인하는 방법 : instanceOf
+
+console.log(rectangle instanceof Rectangle); // True 
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*! JSON */
 

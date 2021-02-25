@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+</head>
+
+<body>
+    <input type="button" value="alert" onclick="func_alert();" />
+    <input type="button" value="confirm" onclick="func_confirm();" />
+    <input type="button" value="prompt" onclick="func_prompt();" />
+
+
+
+
+
+    <script>
+        function func_alert() {
+            alert(1);
+            alert(2);
+            alert(3);
+        }
+        function func_confirm() {
+            if (confirm('ok?')) {
+                alert('ok'); // 확인을 누를시에 True값으로 출력되어 if로 들어간다.
+            } else {
+                alert('cancel') // 취소를 누르면 Flase값으로 출력되어 else로 들어간다.
+            }
+        }
+
+        function func_prompt() {
+            if (prompt("id?") === "hyunbin") {
+                alert("welcome");
+            } else {
+                alert('fail');
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

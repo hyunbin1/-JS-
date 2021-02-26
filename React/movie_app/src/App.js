@@ -1,24 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // id root html에 이 내용을 집어넣는다. index.js - ReactDOM.render에서 id=root를 사용한다는 것을 알 수 있다.
+    <div>hello!!!</div>
   );
 }
 

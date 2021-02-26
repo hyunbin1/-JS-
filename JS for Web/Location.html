@@ -9,6 +9,40 @@
 </head>
 
 <body>
+    <script>
+        // 첫번째 인자: location이라는 객체의 tostring이라고 했을때 출력되는 결과 
+        // 두번째 인자:객체의 location의 프로퍼티(속성)에 접근했을때 출력되는 결과. 
+        // 서로 결과는 동일하다. 하지만 두번째 인자가 더 선호됨
+        console.log(location.toString(), location.href);
+
+        // location의 속성들을 모두 볼 수 있다.
+        // console.log를 사용하면 console.log가 객체가 가지고 있는 속성들을 내부적으로 분석하여 객체에 관한 정보를 출력해준다.
+        console.log(location);
+        // alert는 인자로 들어오는 값이 문자열이여야 하기때문에 location 객체를 문자화 시켜서 보여준다.
+        alert(location) // 출력: 현재 url = 문자화된 결과. == alert(location.toString)과 같다.
+
+        // 프로토콜: 
+        console.log(location.protocol); // 출력: https: - 현재 url 프로토콜
+        // 호스트
+        console.log(location.host); // 출력: opentutorials.org - 현재 url의 서비스를 실현하는 주소값
+        // 포트
+        console.log(location.port); // 출력: :8080 or 생략시 :80 - 컴퓨터에서 돌아가는 서버 소프트웨어들을 식별하는 것
+        // pathname
+        console.log(location.pathname); // 출력: /module/904/5543 웹서버가 가지고 있는 정보 중에 구체적인 정보를 요청하는 정보
+        // serch
+        console.log(location.); // 출력: ?id=10 - 서비스에 전달된 아이디 값.
+        // 해쉬
+        console.log(location.jash); // 출력: #bookmark - 문서안에 특정한 위치를 지정하게되면, 그 위치에 북마킹을 할 수 있다.
+
+
+
+
+
+
+
+
+    </script>
+
 
 </body>
 

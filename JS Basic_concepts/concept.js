@@ -601,6 +601,11 @@ hello(1초 후에)
 async callback(2초 후에)
 */
 
+// Callback Hell example
+
+class UserStorage {
+
+}
 
 
 

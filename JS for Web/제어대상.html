@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li id="active">HTML</li>
+        <li class="why">HTML</li>>
+        <li id="active">HTML</li>
+    </ul>
+    <script>
+        // id는 딱 하나의 요소에만 효과를 적용한다. 그래서 getElement도 단수로 표현힌디.
+        let li = document.getElementById('active');
+        li.style.color = "red";
+    </script>
+
+    <!-- querySelector -->
+    <h3>
+        선택자를 인자로 받아서 선택자에 해당되는 엘리먼드들의 객체를 찾아서 우리에게 리턴해주는 메소드이다.
+
+    </h3>
+    <script>
+        let hi = document.querySelector('li'); // 위 조건에서 해당되는 하나의 엘리먼트만 리턴한다.
+        li.style.color = "red";
+        // let gi = document.querySelectorAll('li'); // 조건에 충족되는 모든 엘리먼트들을 리턴한다. 
+        // for (let name in gi){
+        //     gi[name].style.color = "blue";
+        // }
+        let ti = documnet.querySelector('.why');
+        li.style.color = "blue";
+    </script>
+
+</body>
+
+</html>

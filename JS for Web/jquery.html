@@ -38,6 +38,41 @@
         즉 <li style="color: red"></li>로 만든다는 것이다.
 
     </h3>
+    <br>
+    <br>
+
+    <!-- 똑같은 방식을 dom과 jquery를 비교해보기 -->
+    <!-- dom -->
+    <script?>
+        let lis = document.getElementsByTagName('li');
+        for (let i = 0; i < lis.length; i++) { lis[i].style.color = "red"; } </script>
+            <!-- jquery -->
+            <script>
+                // 태그
+                $('li').css('color', 'red')
+                // 클래스
+                $('.active').css('color', 'red')
+                // id + css 여러번쓰는것 = 체이닝(chaining)
+                $('#active').css('color', 'red').css('textDecoration', 'underline');
+
+
+            </script>
+
+
+            <h3>
+
+
+
+            </h3>
+            <br>
+            <br>
+            <script>
+
+
+            </script>
+
+
+
 </body>
 
 </html>
